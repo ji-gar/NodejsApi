@@ -1,7 +1,8 @@
 const axios = require('axios');
-const data=async()=>{
+const data=async(baseurl,endPoint)=>{
       try{
-        const info= await axios.get("https://api.chucknorris.io/jokes/random")
+        const info= await axios.get(`${baseurl}${endPoint}`)
+
          return info.data
       }
       catch(err){
