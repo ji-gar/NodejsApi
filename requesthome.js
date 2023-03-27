@@ -21,28 +21,28 @@ const server=http.createServer(async(req,respo)=>{
         
        
             for(let i=0; i<da.query.count; i++){
+              
+            //   await reque().then((data)=>{
+            //         jokesObject={
+            //             id:data.id,
+            //             value:data.value
+            //          }
+            //          jokeArray.push(JSON.stringify(jokesObject))
+            //    }).catch((err)=>{console.log(err)})
 
-              await reque().then((data)=>{
-                    jokesObject={
-                        id:data.id,
-                        value:data.value
-                     }
-                     jokeArray.push(JSON.stringify(jokesObject))
-               }).catch((err)=>{console.log(err)})
-
-            //  try
-            //  {
-            //      let data=await reque()
-            //      jokesObject={
-            //         id:data.id,
-            //         value:data.value
-            //      }
-            //      jokeArray.push(JSON.stringify(jokesObject))
-            //  }
-            //  catch(err)
-            //  {
-            //      console.log(err)
-            //  }
+             try
+             {
+                 let data=await reque()
+                 jokesObject={
+                    id:data.id,
+                    value:data.value
+                 }
+                 jokeArray.push(JSON.stringify(jokesObject))
+             }
+             catch(err)
+             {
+                 console.log(err)
+             }
                 
     
          
